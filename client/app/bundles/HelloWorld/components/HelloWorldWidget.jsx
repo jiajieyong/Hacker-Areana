@@ -22,6 +22,7 @@ export default class HelloWorldWidget extends React.Component {
     const { name } = this.props;
     return (
       <div className="container">
+      <div className="input-group">
         <h3>
           Hello, {name}!
         </h3>
@@ -31,11 +32,12 @@ export default class HelloWorldWidget extends React.Component {
             Say hello to:
           </label>
           <input
-            type="text"
+            type="text" className="form-control"
             value={name}
             onChange={e => this.handleChange(e)}
           />
         </form>
+      </div>
       </div>
     );
   }
