@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-//import QuestionaireWidget from '../components/QuestionaireWidget';
+import QuestionaireWidget from '../components/QuestionaireWidget';
 
 // Simple example of a React "smart" component
 export default class Questionaire extends React.Component {
@@ -9,9 +9,6 @@ export default class Questionaire extends React.Component {
 
   constructor(props, context) {
     super(props, context);
-
-    // How to set initial state in ES6 class syntax
-    // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
     this.state = { name: this.props.name };
   }
 
@@ -20,14 +17,10 @@ export default class Questionaire extends React.Component {
   }
 
   render() {
-    // return (
-    //   <div>
-    //     <QuestionaireWidget name={this.state.name} updateName={e => this.updateName(e)} />
-    //   </div>
-    // );
     return (
-        <div>Questionaire
-        </div>
-      )
+      <div>
+        <QuestionaireWidget name={this.state.name} updateName={e => this.updateName(e)}/>
+      </div>
+    );
   }
 }
